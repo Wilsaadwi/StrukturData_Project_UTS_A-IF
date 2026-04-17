@@ -9,6 +9,8 @@ Selain itu, pemilihan struktur data juga menjadi hal yang penting dalam implemen
 Berdasarkan hal tersebut, pada proyek ini akan dibangun sebuah sistem antrean peminjaman buku berbasis queue dengan implementasi linked list. Sistem ini diharapkan dapat membantu dalam memahami penerapan konsep struktur data secara nyata, serta memberikan gambaran sederhana mengenai bagaimana proses antrean dapat dikelola secara lebih efektif dan terstruktur.
 
 
+
+
 # Rumusan Masalah
 
 
