@@ -69,7 +69,7 @@ Dalam sistem komputer, queue memiliki peran penting dalam pengelolaan proses, te
 Queue memiliki dua operasi utama, yaitu enqueue dan dequeue. Enqueue digunakan untuk menambahkan elemen ke bagian belakang antrian, sedangkan dequeue digunakan untuk menghapus elemen dari bagian depan antrian. Kedua operasi ini berjalan sesuai prinsip FIFO sehingga urutan data tetap terjaga. Cormen et al. (2009) menjelaskan bahwa operasi pada queue dirancang untuk memastikan efisiensi dalam pengelolaan data berurutan. Dengan demikian, implementasi queue seperti yang dijelaskan oleh Trijayanti et al. (2025) sangat efektif digunakan dalam sistem penjadwalan proses karena mampu mengatur alur data secara terstruktur dan efisien.
 
 ## 📚 Sumber Ilmiah 
-- Trijayanti, A., Aulia, I., Khairunisa, N., Purba, F. A. H., & Gunawan, I. (2025). Implementasi Struktur Data Antrian Queue dalam Sistem Penjadwalan Proses pada Sistem Operasi. Jurnal Publikasi Teknik Informatika, 4(2), 48–53. https://doi.org/10.55606/jupti.v4i2.4170
+- Trijayanti, A., Aulia, I., Khairunisa, N., Purba, F. A. H., & Gunawan, I. (2025). Implementasi Struktur Data Antrian Queue dalam Sistem Penjadwalan Proses pada Sistem Operasi. Jurnal Publikasi Teknik Informatika, 4(2), 48–53. 
 - Aho, A. V., Hopcroft, J. E., & Ullman, J. D. (1983). Data Structures and Algorithms. Addison-Wesley.
 - Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.
 - Goodrich, M. T., & Tamassia, R. (2014). Data Structures and Algorithms in Java (6th ed.). Wiley.
