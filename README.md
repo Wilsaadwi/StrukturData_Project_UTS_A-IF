@@ -43,20 +43,36 @@ Melalui kombinasi antara queue dan linked list, sistem ini tidak hanya berfungsi
 
 # Landasan Teori
 
-Struktur data merupakan konsep dasar dalam ilmu komputer yang digunakan untuk menyimpan, mengelola, dan mengorganisasi data agar dapat diproses secara efisien. Pemilihan struktur data yang tepat sangat berpengaruh terhadap kinerja suatu sistem, baik dari segi waktu maupun penggunaan memori. Struktur data umumnya dibagi menjadi beberapa jenis, salah satunya adalah struktur data linear seperti array, stack, queue, dan linked list (Cormen et al., 2009).
+## 1. Pengertian Struktur Data
 
-Queue merupakan salah satu struktur data linear yang digunakan untuk mengelola data secara berurutan. Struktur ini bekerja berdasarkan prinsip FIFO (First In First Out), yaitu data yang pertama kali masuk akan menjadi data pertama yang diproses atau dikeluarkan. Queue banyak digunakan dalam berbagai sistem, seperti antrean layanan, pencetakan dokumen, dan pengelolaan proses dalam sistem operasi. Konsep queue sebagai bagian dari struktur data linear dijelaskan secara luas dalam literatur algoritma dan struktur data (Sedgewick & Wayne, 2011).
+Struktur data merupakan cara untuk menyimpan, mengorganisasikan, dan mengatur data di dalam komputer agar dapat digunakan secara efisien. Data sendiri adalah fakta mentah yang belum memiliki arti, namun dapat diolah menjadi informasi yang berguna dalam sistem komputer (Zakaria & Prijono, 2006; A.S & Shalahuddin, 2016). Menurut Romney & Steinbart (2014), data merupakan fakta yang dikumpulkan, disimpan, dan diproses oleh sistem informasi untuk menghasilkan informasi yang bermanfaat.
 
-FIFO (First In First Out) adalah prinsip utama dalam queue yang memastikan bahwa setiap elemen diproses sesuai dengan urutan kedatangannya. Dengan menggunakan konsep ini, sistem dapat berjalan secara adil dan teratur tanpa adanya prioritas tertentu. Prinsip FIFO juga menjadi pembeda utama antara queue dan struktur data lain seperti stack yang menggunakan konsep LIFO (Last In First Out). Penjelasan mengenai perbedaan prinsip ini banyak dibahas dalam kajian struktur data dan algoritma (Weiss, 2014).
+Struktur data juga dapat dipahami sebagai bentuk abstraksi atau model yang digunakan untuk mengatur data di dalam memori komputer. Setyaningsih (2012) dan Ikhwan et al. (2015) menjelaskan bahwa struktur data merupakan susunan data dalam memori (RAM) yang dapat memiliki berbagai tipe data dalam satu sistem. Selain itu, struktur data juga menggambarkan hubungan antar data secara logis sehingga lebih mudah dipahami dan digunakan dalam pemrograman.
 
-Dalam implementasinya, queue dapat dibangun menggunakan beberapa struktur data, salah satunya adalah linked list. Linked list merupakan struktur data dinamis yang terdiri dari kumpulan node yang saling terhubung. Penggunaan linked list dalam queue memberikan kelebihan dalam hal fleksibilitas, karena tidak memiliki batas kapasitas tetap dan memungkinkan proses penambahan serta penghapusan data dilakukan secara efisien (Necaise, 2011).
+Lebih lanjut, Kadir (2021) menjelaskan bahwa struktur data adalah cara merepresentasikan data dalam media penyimpanan komputer agar dapat digunakan kembali dengan mudah. Struktur data terdiri dari tiga komponen utama, yaitu kumpulan objek data, operasi terhadap objek data, dan hubungan antar objek data. Dengan pemilihan struktur data yang tepat, permasalahan dalam pemrograman dapat diselesaikan lebih efisien karena penggunaan memori dan waktu eksekusi menjadi lebih optimal.
 
 
 ## 📚 Sumber Ilmiah 
-- Cormen, T. H., et al. (2009). Introduction to Algorithms. MIT Press.
-- Sedgewick, R., & Wayne, K. (2011). Algorithms (4th ed.). Addison-Wesley.
-- Weiss, M. A. (2014). Data Structures and Algorithm Analysis. Pearson.
-- Necaise, R. D. (2011). Data Structures and Algorithms Using Python. Wiley.
+- A.S, Rosa & Shalahuddin, M. (2016). Rekayasa Perangkat Lunak Terstruktur dan Berorientasi Objek. Informatika.
+- Ikhwan, A., et al. (2015). Struktur Data dan Algoritma. Modul/Buku Ajar.
+- Kadir, A. (2021). Dasar Perancangan dan Implementasi Database Relasional. Andi.
+- Romney, M. B., & Steinbart, P. J. (2014). Sistem Informasi Akuntansi. Pearson.
+- Setyaningsih. (2012). Struktur Data. Modul/Buku Ajar.
+- Zakaria, T. M., & Prijono, A. (2006). Konsep dan Implementasi Struktur Data. Informatika.
+
+## 2 Konsep Queue
+
+Queue atau antrian merupakan salah satu struktur data linear yang menerapkan prinsip First In First Out (FIFO), yaitu elemen yang pertama masuk akan menjadi elemen yang pertama keluar. Konsep queue digunakan untuk mengatur data secara berurutan agar proses pengolahan data menjadi lebih sistematis dan efisien. Menurut Trijayanti et al. (2025), queue merupakan struktur data yang banyak digunakan dalam sistem penjadwalan proses pada sistem operasi untuk mengelola antrian proses secara teratur. Selain itu, Aho, Hopcroft, & Ullman (1983) menjelaskan bahwa queue termasuk struktur data linear yang sangat penting dalam pengaturan urutan data dalam pemrograman komputer.
+
+Dalam sistem komputer, queue memiliki peran penting dalam pengelolaan proses, terutama pada sistem operasi. Struktur ini digunakan untuk mengatur proses yang masuk ke CPU berdasarkan urutan kedatangan sehingga setiap proses mendapatkan kesempatan eksekusi secara adil. Hal ini bertujuan untuk meningkatkan efisiensi sistem dan mengurangi waktu tunggu proses. Menurut Goodrich & Tamassia (2014), queue juga sering digunakan dalam berbagai aplikasi komputasi seperti manajemen antrian, pengolahan data, dan algoritma pemrosesan berurutan yang membutuhkan keteraturan dalam eksekusi data.
+
+Queue memiliki dua operasi utama, yaitu enqueue dan dequeue. Enqueue digunakan untuk menambahkan elemen ke bagian belakang antrian, sedangkan dequeue digunakan untuk menghapus elemen dari bagian depan antrian. Kedua operasi ini berjalan sesuai prinsip FIFO sehingga urutan data tetap terjaga. Cormen et al. (2009) menjelaskan bahwa operasi pada queue dirancang untuk memastikan efisiensi dalam pengelolaan data berurutan. Dengan demikian, implementasi queue seperti yang dijelaskan oleh Trijayanti et al. (2025) sangat efektif digunakan dalam sistem penjadwalan proses karena mampu mengatur alur data secara terstruktur dan efisien.
+
+## 📚 Sumber Ilmiah 
+- Trijayanti, A., Aulia, I., Khairunisa, N., Purba, F. A. H., & Gunawan, I. (2025). Implementasi Struktur Data Antrian Queue dalam Sistem Penjadwalan Proses pada Sistem Operasi. Jurnal Publikasi Teknik Informatika, 4(2), 48–53. https://doi.org/10.55606/jupti.v4i2.4170
+- Aho, A. V., Hopcroft, J. E., & Ullman, J. D. (1983). Data Structures and Algorithms. Addison-Wesley.
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.
+- Goodrich, M. T., & Tamassia, R. (2014). Data Structures and Algorithms in Java (6th ed.). Wiley.
 
 ---
 
