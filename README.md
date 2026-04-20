@@ -62,4 +62,64 @@ Dalam implementasinya, queue dapat dibangun menggunakan beberapa struktur data, 
 
 # Desain Sistem dan Implementasi
 
+```mermaid
+flowchart TD
+    A([Start]) --> B[Inisialisasi Linked List dan Storage]
+    B --> C{Pilih Menu}
+
+    C -->|1 Tambah Data| D[Input Data Peminjam]
+    D --> E[total_antrean + 1]
+    E --> F[Buat Node Baru]
+
+    F --> G[Simpan ke storage list]
+    G --> H{Head Kosong?}
+
+    H -->|Ya| I[Head = Node Baru]
+    H -->|Tidak| J[Telusuri ke Node Terakhir]
+    J --> K[Node Terakhir.next = Node Baru]
+
+    I --> L[Tampilkan No Antrian]
+    K --> L
+    L --> C
+
+    C -->|2 Lihat Data| M{Head Kosong?}
+    M -->|Ya| N[Tampilkan antrean kosong]
+    M -->|Tidak| O[Loop dari Head]
+
+    O --> P[Tampilkan Data Peminjam]
+    P --> Q{Masih ada node?}
+
+    Q -->|Ya| O
+    Q -->|Tidak| R[Tampilkan Total Antrean]
+    R --> C
+    N --> C
+
+    C -->|3 Hapus FIFO| S{Head Kosong?}
+    S -->|Ya| T[Tidak ada data]
+    S -->|Tidak| U[Ambil Data Head]
+
+    U --> V[Tampilkan Data Diproses]
+    V --> W[Head = Head.next]
+    W --> X[Hapus data pertama di storage]
+    X --> Y[Data berhasil dihapus]
+    Y --> C
+    T --> C
+
+    C -->|4 Keluar| Z([End])
+```
+
+# Penjelasan Alur Flowchart
+
+Flowchart pada sistem ini menggambarkan alur kerja program antrean peminjaman buku di perpustakaan yang dibangun menggunakan konsep queue (FIFO) dengan implementasi linked list. Program dimulai dari proses inisialisasi, di mana sistem membuat struktur antrean berupa linked list yang masih kosong, serta menyiapkan struktur tambahan berupa list (storage) untuk menyimpan data secara terpisah, dan variabel total antrean sebagai penomoran otomatis.
+
+Setelah proses inisialisasi, sistem menampilkan menu utama yang terdiri dari beberapa pilihan, yaitu menambah data peminjaman, menampilkan data antrean, menghapus data berdasarkan FIFO, dan keluar dari program. Pengguna memilih salah satu menu, kemudian sistem akan menjalankan proses sesuai dengan pilihan tersebut dan kembali ke menu utama selama program masih berjalan.
+
+Pada saat pengguna memilih menu tambah data, sistem akan menerima input data peminjaman seperti ID peminjaman, ID buku, nama, NIM, program studi, judul buku, tahun terbit, tanggal pinjam, dan tanggal kembali. Setelah itu, sistem akan menambahkan nomor antrean secara otomatis dengan meningkatkan nilai total antrean. Data tersebut kemudian dibentuk menjadi sebuah node baru. Node ini akan disimpan ke dalam storage list, lalu dimasukkan ke dalam linked list. Jika antrean masih kosong, node akan menjadi head. Namun jika sudah terdapat data sebelumnya, sistem akan melakukan penelusuran dari head hingga node terakhir menggunakan proses iterasi, kemudian menghubungkan node baru di bagian akhir antrean.
+
+Pada menu lihat data, sistem akan mengecek apakah antrean kosong atau tidak. Jika kosong, sistem menampilkan pesan bahwa belum ada data peminjaman. Jika terdapat data, sistem akan melakukan penelusuran node satu per satu mulai dari head hingga akhir, lalu menampilkan informasi seperti nomor antrean, ID peminjaman, NIM, nama, dan judul buku. Setelah seluruh data ditampilkan, sistem juga menampilkan total jumlah transaksi peminjaman yang telah dilakukan.
+
+Pada menu hapus data (FIFO), sistem kembali melakukan pengecekan apakah antrean kosong. Jika kosong, sistem menampilkan pesan bahwa tidak ada data yang dapat diproses. Jika terdapat data, maka node yang berada di posisi paling depan (head) akan diambil sebagai data yang diproses terlebih dahulu sesuai prinsip FIFO. Data tersebut ditampilkan sebagai informasi peminjaman yang sedang diselesaikan. Selanjutnya, posisi head akan dipindahkan ke node berikutnya sehingga data pertama terhapus dari antrean. Selain itu, elemen pertama pada storage list juga dihapus untuk menjaga konsistensi data antara kedua struktur.
+
+Proses ini akan terus berulang hingga pengguna memilih menu keluar. Ketika pengguna memilih menu keluar, program akan dihentikan dan seluruh proses berakhir. Dengan alur tersebut, sistem mampu merepresentasikan mekanisme antrean peminjaman buku secara terstruktur, adil, dan sesuai dengan kondisi nyata di perpustakaan.
+
 # Kesimpulan
