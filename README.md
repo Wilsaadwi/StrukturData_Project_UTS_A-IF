@@ -60,7 +60,7 @@ Lebih lanjut, Kadir (2021) menjelaskan bahwa struktur data adalah cara mereprese
 - Setyaningsih. (2012). Struktur Data. Modul/Buku Ajar.
 - Zakaria, T. M., & Prijono, A. (2006). Konsep dan Implementasi Struktur Data. Informatika.
 
-## 2 Konsep Queue
+## 2. Konsep Queue
 
 Queue atau antrian merupakan salah satu struktur data linear yang menerapkan prinsip First In First Out (FIFO), yaitu elemen yang pertama masuk akan menjadi elemen yang pertama keluar. Konsep queue digunakan untuk mengatur data secara berurutan agar proses pengolahan data menjadi lebih sistematis dan efisien. Menurut Trijayanti et al. (2025), queue merupakan struktur data yang banyak digunakan dalam sistem penjadwalan proses pada sistem operasi untuk mengelola antrian proses secara teratur. Selain itu, Aho, Hopcroft, & Ullman (1983) menjelaskan bahwa queue termasuk struktur data linear yang sangat penting dalam pengaturan urutan data dalam pemrograman komputer.
 
