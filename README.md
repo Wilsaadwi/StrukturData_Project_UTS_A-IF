@@ -74,6 +74,35 @@ Queue memiliki dua operasi utama, yaitu enqueue dan dequeue. Enqueue digunakan u
 - Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2009). Introduction to Algorithms (3rd ed.). MIT Press.
 - Goodrich, M. T., & Tamassia, R. (2014). Data Structures and Algorithms in Java (6th ed.). Wiley.
 
+## 3. Konsep FIFO
+
+Algoritma First In First Out (FIFO) merupakan metode penjadwalan sederhana yang banyak digunakan dalam sistem antrean (queueing system) dan sistem operasi. Prinsip utama FIFO adalah proses atau entitas yang pertama kali datang akan dilayani terlebih dahulu, tanpa mempertimbangkan prioritas tertentu. Dalam konteks sistem operasi, FIFO dikenal juga sebagai First Come First Served (FCFS), di mana setiap proses dieksekusi berdasarkan urutan kedatangannya (arrival time) dan akan dijalankan hingga selesai sebelum proses berikutnya dimulai (Silberschatz, Galvin, & Gagne, 2020; Stallings, 2018). Konsep ini menjadikan FIFO sebagai metode dasar dalam memahami mekanisme penjadwalan proses pada CPU.
+
+Dalam implementasinya, FIFO bekerja dengan memperhatikan beberapa parameter penting seperti arrival time, burst time, waiting time, dan turn around time. Proses yang datang lebih awal akan masuk ke antrian dan dieksekusi terlebih dahulu, sehingga urutan eksekusi bersifat linear dan tidak memiliki mekanisme prioritas (non-preemptive). Menurut Kleinrock (1975), FIFO merupakan bentuk paling dasar dari queueing discipline yang digunakan untuk menggambarkan sistem antrean dalam teori antrian. Selain itu, Gross et al. (2023) menjelaskan bahwa FIFO juga menjadi dasar dalam model sistem antrean seperti M/M/1 yang menggambarkan hubungan antara laju kedatangan dan waktu pelayanan dalam suatu sistem.
+
+Selain digunakan dalam sistem operasi, FIFO juga banyak diterapkan dalam berbagai bidang seperti manajemen persediaan barang, jaringan komputer, dan sistem pelayanan. Dalam industri, FIFO digunakan untuk memastikan barang yang lebih dahulu masuk akan lebih dahulu keluar guna menghindari risiko kedaluwarsa (Sohrabi et al., 2021). Pada sistem jaringan, FIFO digunakan untuk mengatur antrian paket data agar diproses sesuai urutan kedatangan (Attar et al., 2020). Dengan demikian, FIFO tidak hanya berfungsi sebagai konsep dasar dalam teori penjadwalan proses, tetapi juga menjadi fondasi penting dalam berbagai sistem komputasi dan industri modern karena kesederhanaan dan keadilannya dalam pengelolaan antrian.
+
+## 📚 Sumber Ilmiah 
+- Attar, H., Hashim, S., & Diko, I. (2020). Review and performance evaluation of FIFO, PQ, CQ, FQ, WFQ, and CBWFQ queue scheduling mechanisms. International Journal of Engineering Research and Technology, 9(3), 112–118.
+- Gross, D., Shortle, J. F., Thompson, J. M., & Harris, C. M. (2023). Fundamentals of queueing theory (6th ed.). Wiley.
+- Kleinrock, L. (1975). Queueing systems, volume I: Theory. Wiley-Interscience.
+- Silberschatz, A., Galvin, P. B., & Gagne, G. (2020). Operating system concepts (10th ed.). Wiley.
+- Sohrabi, M., Baygi, S. F., & Rezaei, M. (2021). A simple empirical inventory model using FIFO for managing material expiry. BMC Health Services Research, 21(5), 145–157.
+- Stallings, W. (2018). Operating systems: Internals and design principles (9th ed.). Pearson.
+
+## 4. Implementasi Menggunakan Linked List
+
+Linked list merupakan struktur data linear yang digunakan untuk menyimpan data dalam bentuk node yang saling terhubung. Setiap node terdiri dari data dan pointer yang menunjuk ke node berikutnya. Struktur ini bersifat dinamis karena tidak memiliki ukuran tetap seperti array. Hal ini menjadikan linked list lebih fleksibel dalam pengelolaan data (Carrano, 2013; Lipschutz, 2009; Tremblay & Sorenson, 1984).
+
+Dalam implementasinya, linked list memungkinkan proses penambahan dan penghapusan data dilakukan tanpa perlu menggeser elemen lain. Hal ini menjadi keunggulan utama dibandingkan dengan array. Efisiensi ini sangat berguna dalam sistem yang sering mengalami perubahan data. Oleh karena itu, linked list sering digunakan dalam berbagai aplikasi struktur data (Lipschutz, 2009; Tremblay & Sorenson, 1984; Carrano, 2013).
+
+Linked list juga dapat digunakan dalam implementasi queue dengan menambahkan data di bagian belakang dan menghapus data dari bagian depan. Hal ini sesuai dengan prinsip FIFO yang digunakan dalam queue. Dengan demikian, linked list dapat mendukung sistem antrean secara optimal. Selain itu, linked list mampu menangani jumlah data yang dinamis (Carrano, 2013; Tremblay & Sorenson, 1984; Lipschutz, 2009).
+
+## 📚 Sumber Ilmiah 
+- Carrano, F. M. (2013). Data Abstraction and Problem Solving with C++.
+- Lipschutz, S. (2009). Data Structures. Schaum’s Outline.
+- Tremblay, J. P., & Sorenson, P. G. (1984). An Introduction to Data Structures with Applications.
+  
 ---
 
 # Desain Sistem dan Implementasi
