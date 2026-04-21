@@ -108,48 +108,46 @@ Linked list juga dapat digunakan dalam implementasi queue dengan menambahkan dat
 # Desain Sistem dan Implementasi
 
 ```mermaid
-flowchart TD
-    A([Start]) --> B[Inisialisasi Linked List dan Storage]
+flowchart TB
+    A([Start]) --> B[Inisialisasi\nLinked List & Storage]
     B --> C{Pilih Menu}
 
-    C -->|1 Tambah Data| D[Input Data Peminjam]
-    D --> E[total_antrean + 1]
-    E --> F[Buat Node Baru]
-
-    F --> G[Simpan ke storage list]
+    %% ===== TAMBAH DATA =====
+    C -->|1 Tambah| D[Input Data]
+    D --> E[No Antrian +1]
+    E --> F[Buat Node]
+    F --> G[Simpan Data]
     G --> H{Head Kosong?}
-
-    H -->|Ya| I[Head = Node Baru]
-    H -->|Tidak| J[Telusuri ke Node Terakhir]
-    J --> K[Node Terakhir.next = Node Baru]
-
-    I --> L[Tampilkan No Antrian]
+    H -->|Ya| I[Set Head]
+    H -->|Tidak| J[Ke Node Akhir]
+    J --> K[Tambah Node]
+    I --> L[Tampil No Antri]
     K --> L
     L --> C
 
-    C -->|2 Lihat Data| M{Head Kosong?}
-    M -->|Ya| N[Tampilkan antrean kosong]
+    %% ===== LIHAT DATA =====
+    C -->|2 Lihat| M{Head Kosong?}
+    M -->|Ya| N[Antrean Kosong]
     M -->|Tidak| O[Loop dari Head]
-
-    O --> P[Tampilkan Data Peminjam]
-    P --> Q{Masih ada node?}
-
+    O --> P[Tampil Data]
+    P --> Q{Ada Node Lagi?}
     Q -->|Ya| O
-    Q -->|Tidak| R[Tampilkan Total Antrean]
+    Q -->|Tidak| R[Tampil Total]
     R --> C
     N --> C
 
-    C -->|3 Hapus FIFO| S{Head Kosong?}
-    S -->|Ya| T[Tidak ada data]
-    S -->|Tidak| U[Ambil Data Head]
-
-    U --> V[Tampilkan Data Diproses]
-    V --> W[Head = Head.next]
-    W --> X[Hapus data pertama di storage]
-    X --> Y[Data berhasil dihapus]
+    %% ===== HAPUS FIFO =====
+    C -->|3 Hapus| S{Head Kosong?}
+    S -->|Ya| T[Tidak Ada Data]
+    S -->|Tidak| U[Ambil Head]
+    U --> V[Tampil Diproses]
+    V --> W[Head = Next]
+    W --> X[Hapus Data]
+    X --> Y[Selesai]
     Y --> C
     T --> C
 
+    %% ===== KELUAR =====
     C -->|4 Keluar| Z([End])
 ```
 
